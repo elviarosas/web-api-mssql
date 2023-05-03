@@ -7,4 +7,6 @@ router.get("/:id", UserControllers.getTema);
 router.post("/add", UserControllers.addTema);
 router.put("/update/:id", UserControllers.updateTema);
 router.delete("/delete/:id", UserControllers.deleteTema);
+
+router.get("/:estatus", UserControllers.getTema);
 module.exports = router;
