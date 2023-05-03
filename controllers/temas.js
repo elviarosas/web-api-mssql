@@ -66,8 +66,9 @@ module.exports = {
               .status(500)
               .json({ message: `Erro al agregar el Tema. Err: ${err}` });
           } else {
-            var temas = resultset.recordset;
-            return res.status(200).json(temas);
+            var temas = resultset.rowsAffected;
+            console.log(resultset);
+            return res.json(temas);
           }
         });
     } catch (err) {
